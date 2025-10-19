@@ -1,25 +1,25 @@
 package ru.infoza.udemyspringframework.game;
 
-public class MarioGame implements GamingConsole {
+public class PacmanGame implements GamingConsole {
 
     @Override
     public void up() {
-        System.out.println("jump");
+        System.out.println("Pacman up");
     }
 
     @Override
     public void down() {
-        System.out.println("down into a hole");
+        System.out.println("Pacman down");
     }
 
     @Override
     public void left() {
-        System.out.println("stop");
+        System.out.println("Pacman left");
     }
 
     @Override
     public void right() {
-        System.out.println("accelerate");
+        System.out.println("Pacman right");
     }
 
 }

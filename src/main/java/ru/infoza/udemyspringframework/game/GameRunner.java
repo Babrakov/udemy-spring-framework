@@ -2,9 +2,9 @@ package ru.infoza.udemyspringframework.game;
 
 public class GameRunner {
 
-    private final MarioGame game;
+    private final GamingConsole game;
 
-    public GameRunner(MarioGame game) {
+    public GameRunner(GamingConsole game) {
         this.game = game;
     }
 
