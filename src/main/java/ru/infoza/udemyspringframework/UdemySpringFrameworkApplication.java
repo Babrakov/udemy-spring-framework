@@ -2,23 +2,24 @@ package ru.infoza.udemyspringframework;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import ru.infoza.udemyspringframework.game.GameRunner;
-import ru.infoza.udemyspringframework.game.MarioGame;
-import ru.infoza.udemyspringframework.game.PacmanGame;
-import ru.infoza.udemyspringframework.game.SuperContraGame;
+import ru.infoza.udemyspringframework.game.GamingConsole;
 
 @SpringBootApplication
 public class UdemySpringFrameworkApplication {
 
-	public static void main(String[] args) {
-//        SpringApplication.run(UdemySpringFrameworkApplication.class, args);
+    public static void main(String[] args) {
+        //        MarioGame game = new MarioGame();
+        //        SuperContraGame game = new SuperContraGame();
+        //        PacmanGame game = new PacmanGame();
+        //        GameRunner runner = new GameRunner(game);
+        //        runner.run();
 
-//        MarioGame game = new MarioGame();
-//        SuperContraGame game = new SuperContraGame();
-        PacmanGame game = new PacmanGame();
-        GameRunner runner = new GameRunner(game);
+        ConfigurableApplicationContext context
+                = SpringApplication.run(UdemySpringFrameworkApplication.class, args);
+        GameRunner runner = context.getBean(GameRunner.class);
         runner.run();
-
-	}
+    }
 
 }
